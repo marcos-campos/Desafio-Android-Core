@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Cardapio"/>
+        <activity android:name=".ListaRestauranteActivity"/>
 
-        <activity android:name=".Detalhe01"/>
+        <activity android:name=".DetalheRestauranteActivity"/>
 
 
         <meta-data

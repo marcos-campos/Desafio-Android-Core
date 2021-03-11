@@ -1,3 +1,8 @@
 package com.example.desafioandroidcore
 
-data class Restaurante (val nomeDoRestaurante: String?, val horarioFuncionamento: String?, val imagemDoRestaurante: Int, val endereco: String?)
+import android.os.Parcelable
+import java.io.Serializable
+
+
+data class Restaurante (val nomeDoRestaurante: String?, val horarioFuncionamento: String?, val imagemDoRestaurante: Int,
+                        val endereco: String?, val menu: ArrayList<Prato>): Serializable

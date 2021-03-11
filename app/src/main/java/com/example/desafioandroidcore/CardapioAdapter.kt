@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class CardapioAdapter(val listaCardapios: MutableList<Restaurante>) : RecyclerView.Adapter<CardapioViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardapioViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.cardapio, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_restaurantes, parent, false)
         return  CardapioViewHolder(view)
 
     }
@@ -33,9 +33,10 @@ class CardapioAdapter(val listaCardapios: MutableList<Restaurante>) : RecyclerVi
 
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(it.context, Detalhe01::class.java)
-            intent.putExtra("NOME", listaCardapios[position].nomeDoRestaurante)
-            intent.putExtra("IMAGEM", listaCardapios[position].imagemDoRestaurante)
+            val intent = Intent(it.context, DetalheRestauranteActivity::class.java)
+//            intent.putExtra("NOME", listaCardapios[position].nomeDoRestaurante)
+//            intent.putExtra("IMAGEM", listaCardapios[position].imagemDoRestaurante)
+            intent.putExtra("RESTAURANTE", listaCardapios[position])
             it.context.startActivity(intent)
 
 
