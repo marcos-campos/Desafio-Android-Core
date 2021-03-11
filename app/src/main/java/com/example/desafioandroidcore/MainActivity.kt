@@ -14,6 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val btnRegistrar = findViewById<Button>(R.id.button_register)
+        btnRegistrar.setOnClickListener {
+            val intent = Intent(this, Cadastro::class.java)
+            startActivity(intent)
+        }
+
         val etUser = findViewById<EditText>(R.id.et_user)
         val etPass = findViewById<EditText>(R.id.et_password)
 
@@ -43,7 +49,7 @@ class MainActivity : AppCompatActivity() {
 
         when {
             nome.isEmpty() -> {
-                Toast.makeText(this, "Nome invalido", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Email invalido", Toast.LENGTH_SHORT).show()
                 userError.error = "Campo obrigatório"
 
                 return false
