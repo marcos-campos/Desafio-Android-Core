@@ -34,8 +34,7 @@ class CardapioAdapter(val listaCardapios: MutableList<Restaurante>) : RecyclerVi
 
         holder.itemView.setOnClickListener {
             val intent = Intent(it.context, DetalheRestauranteActivity::class.java)
-//            intent.putExtra("NOME", listaCardapios[position].nomeDoRestaurante)
-//            intent.putExtra("IMAGEM", listaCardapios[position].imagemDoRestaurante)
+
             intent.putExtra("RESTAURANTE", listaCardapios[position])
             it.context.startActivity(intent)
 

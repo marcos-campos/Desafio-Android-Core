@@ -24,9 +24,6 @@ class DetalheRestauranteActivity : AppCompatActivity() {
 
         if (informacoes != null) {
 
-//            val nomeDoRestaurante = informacoes.getString("NOME")
-//            val imagemDoRestaurante = informacoes.getInt("IMAGEM")
-//            val restaurannteRecebido = Restaurante(nomeDoRestaurante, "", imagemDoRestaurante, "", arrayListOf())
 
             val restauranteRecebido = informacoes.getSerializable("RESTAURANTE") as Restaurante
 
@@ -46,7 +43,6 @@ class DetalheRestauranteActivity : AppCompatActivity() {
 
     private fun setRecyclerView(listaPratos: ArrayList<Prato>) {
 
-//        recyclerDetalhe.layoutManager = LinearLayoutManager(this)
 
         recyclerDetalhe.layoutManager = GridLayoutManager(this, 2)
 
@@ -55,23 +51,6 @@ class DetalheRestauranteActivity : AppCompatActivity() {
         recyclerDetalhe.adapter = adapterOk
 
     }
-
-
-//    private fun adicionarItensDosCardapios(): List<Prato> {
-//
-//        val listaPratosDoCardapio = mutableListOf<Prato>()
-//
-//        listaPratosDoCardapio.add(Prato("Contra filé", R.drawable.prato1, R.drawable.prato2, "Filé de frango"))
-//        listaPratosDoCardapio.add(Prato("Costelinha", R.drawable.prato3, R.drawable.prato4, "Feijoada"))
-//        listaPratosDoCardapio.add(Prato("Churrasco", R.drawable.prato5, R.drawable.prato6, "Virada Paulista"))
-//        listaPratosDoCardapio.add(Prato("Picanha", R.drawable.prato7, R.drawable.prato8, "Filé de Peixe"))
-//
-//
-//        return listaPratosDoCardapio
-//
-//    }
-
-
 
 
 }

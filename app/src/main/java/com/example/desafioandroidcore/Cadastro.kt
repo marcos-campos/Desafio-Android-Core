@@ -1,5 +1,6 @@
 package com.example.desafioandroidcore
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -61,6 +62,8 @@ class Cadastro: AppCompatActivity() {
             } else -> {
 
             Toast.makeText(this, "Usuário cadastrado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
 
                 return true
 
